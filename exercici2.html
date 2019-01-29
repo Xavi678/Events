@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+<style>
+      body {font-family: arial, helvetica;}
+        .box {width:160px; height:160px; border:thin solid silver; padding:.5em; float: left; margin-right: 15px;}
+        .box h1 {margin: 0;}
+</style>
+</head>
+<body >
+
+        <body id="bdy">     
+                <div id="dv">           
+                  <button id="btn">HAZME CLIC</button>   
+                  
+                </div>    
+            </body>              
+
+           
+<script>
+
+/*a*/
+
+document.getElementById("bdy").addEventListener("click",alerta,true);
+
+document.getElementById("dv").addEventListener("click",alerta,true);
+
+document.getElementById("btn").addEventListener("click",alerta,true);
+
+/*b*/
+document.getElementById("bdy").addEventListener("click",alerta,false);
+
+document.getElementById("dv").addEventListener("click",alerta,false);
+
+document.getElementById("btn").addEventListener("click",alerta,true);
+
+/*c*/
+
+document.getElementById("bdy").addEventListener("click",alerta,true);
+
+document.getElementById("dv").addEventListener("click",alerta,false);
+
+document.getElementById("btn").addEventListener("click",alerta,true);
+
+/*d*/
+
+document.getElementById("bdy").addEventListener("click",alerta,true);
+
+document.getElementById("dv").addEventListener("click",alerta,true);
+
+document.getElementById("btn").addEventListener("click",alerta,true);
+
+document.getElementById("dv").addEventListener("click",alerta,false);
+
+function alerta(){
+    alert(this);
+}
+
+
+
+</script>
+</body>
+
+</html>

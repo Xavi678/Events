@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+<style>
+     
+</style>
+</head>
+<body>     
+    <div id="elDiv">           
+      <a id="elButton" href="http://www.google.es">HAZME CLIC</a>     
+    </div>    
+</body>  
+         
+
+           
+<script>
+
+    window.onload = function (){
+        var elBody = document.getElementsByTagName('body')[0];
+        var elDiv = document.getElementById('elDiv');
+        var elButton = document.getElementById('elButton');
+    elBody.addEventListener('click',alerta1,true);
+    elDiv.addEventListener('click',alerta2,true);
+    elButton.addEventListener('click',alerta3,true);
+    elBody.addEventListener('click',alerta1,false);
+    elDiv.addEventListener('click',alerta2,false);
+    elButton.addEventListener('click',alerta3,false);
+}
+
+
+
+
+
+
+/* EXEMPLE A
+function alerta1(e){
+    alert(this);
+ 
+}
+function alerta2(e){
+    alert(this);
+ 
+}
+function alerta3(e){
+    alert(this);
+  
+}*/
+
+
+ /*  EXEMPLE B
+function alerta1(e){
+    alert(this);
+ 
+}
+function alerta2(e){
+    e.preventDefault();
+    alert(this);
+   
+}
+function alerta3(e){
+    alert(this);
+
+} */
+
+ /* EXEMPLE  C
+function alerta1(e){
+    alert(this);
+ 
+}
+function alerta2(e){
+    
+    alert(this);
+   
+}
+function alerta3(e){
+    alert(this);
+    e.stopPropagation();
+
+} */
+
+
+  /*  EXEMPLE D
+function alerta1(e){
+    alert(this);
+ 
+}
+function alerta2(e){
+    
+    alert(this);
+   
+}
+function alerta3(e){
+    alert(this);
+    e.stopPropagation();
+    e.preventDefault();
+
+} */
+
+  /* EXEMPLE E
+function alerta1(e){
+    alert(this);
+ 
+}
+function alerta2(e){
+    
+    alert(this);
+    e.stopPropagation();
+   
+}
+function alerta3(e){
+  
+    alert(this);
+    
+
+} */
+ 
+ /* EXEMPLE   F
+function alerta1(e){
+    alert(this);
+    e.stopPropagation();
+    e.preventDefault();
+ 
+}
+function alerta2(e){
+    
+    alert(this);
+    
+   
+}
+function alerta3(e){
+  
+    alert(this);
+    
+
+}*/
+
+
+
+
+</script>
+
+</html>

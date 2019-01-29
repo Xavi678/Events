@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+ <html>
+<head>
+    <meta charset="UTF-8">
+
+</head>
+ <body>
+
+<ul>
+    <li id="1" >Avila</li>
+    <li id="2" >Salamanca</li>
+    <li id="3" >Zamora</li>
+    <li id="4" >León</li>
+    <li id="5" >Soria</li>
+    <li id="6" >Valladolid</li>
+    <li id="7" >Burgos</li>
+    <li id="8" >Segovia</li>
+    <li id="9" >Palencia</li>
+ </ul>
+ <script>
+   /* function canviar(id){
+        document.getElementById(id).innerHTML="clicked";
+    }*/
+
+
+lis = document.getElementsByTagName('li');
+for (var i = 0; i < lis.length; i++) {
+    lis[i].addEventListener('click',canviar,false);
+}
+function canviar(ev){
+  document.getElementById( ev.target.id).innerHTML="clicked";
+}
+
+
+  
+ 
+
+ </script>
+ </body>
+
+ </html>
