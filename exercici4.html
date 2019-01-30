@@ -24,31 +24,61 @@
        <div id="c"></div>
     </div>
     <script >
+        
+        
+        
+
+       
         document.addEventListener("keydown", function(event) {
            document.getElementById("teclado").style.background="#CCE6FF";
             var y = String.fromCharCode(event.which);  
-            document.getElementById("mostra").innerHTML="Caracter ["+y+"]";
-            document.getElementById("c").innerHTML="Código ["+event.which+"]";
+            /*document.getElementById("mostra").innerHTML="Caracter ["+y+"]";
+            document.getElementById("c").innerHTML="Código ["+event.which+"]";*/
+
+            var mensaje=[];
+
+            mensaje.push("Teclado");
+            mensaje.push("Caracter ["+String.fromCharCode(event.which)+"]");
+            mensaje.push("Código ["+event.which+"]");
+
+
+    muestraInformacion("teclado",mensaje)
+          
             });
      
 
         document.addEventListener("mousemove", function(e){
             document.getElementById("teclado").style.background="white"
             document.getElementById("raton").style.background="white"
-           document.getElementById("ratoli").innerHTML=e.pageX;
+         /*  document.getElementById("ratoli").innerHTML=e.pageX;
            document.getElementById("1").innerHTML=e.pageY;
 
            document.getElementById("ratoli1").innerHTML=e.clientX;
-           document.getElementById("11").innerHTML=e.clientY;
+           document.getElementById("11").innerHTML=e.clientY;*/
+
+           var mensaje=[];
+
+           mensaje.push("Ratón");
+           mensaje.push("["+e.pageY+","+e.pageX+"]");
+           mensaje.push("["+e.offsetX+","+e.offsetY+"]");
+           
+
+           muestraInformacion("raton",mensaje)
         });
 
+        function muestraInformacion(divId, mensaje) {
+  document.getElementById(divId).innerHTML = '<h1>'+mensaje[0]+'</h1>';
+  for(var i=1; i<mensaje.length; i++) {
+    document.getElementById(divId).innerHTML += '<p>'+mensaje[i]+'</p>';
+  }
+}
        
 
         document.addEventListener("click", function(event) {
             document.getElementById("raton").style.background="#FFFFCC";
             });
 
-
+           
 
 
 
